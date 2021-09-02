@@ -20,4 +20,10 @@ def project(request):
 def contactme(request):
     return render(request, 'contactme.html')
 
+def Achievements(request):
+    return render(request, 'Achievements.html')
+
+def Links(request):
+    return render(request, 'Links.html')
+
  
