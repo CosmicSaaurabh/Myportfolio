@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-
+from home import models 
 
 
 # Create your views here.
@@ -18,6 +18,16 @@ def project(request):
     return render(request, 'project.html')
 
 def contactme(request):
+    if request.method == "POST":
+        print("This is post method")
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        desc = request.POST['message']
+        ins = models.Contact(name = name, email = email, phone = phone, desc = desc)
+        ins.save()
+        print("the data has been written to db")
+
     return render(request, 'contactme.html')
 
 def Achievements(request):

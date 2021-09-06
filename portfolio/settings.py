@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'home' ,
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -126,5 +127,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # typically, os.path.join(os.path.dirname(__file__), 'media')
-MEDIA_ROOT = '/home/USER/Projects/REPO/src/PROJECT/APP/static/media/'
-MEDIA_URL = '/static/media/'
